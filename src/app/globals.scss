@@ -1,0 +1,89 @@
+:root{
+  --color-red: #CB0D1F;
+  --color-red-text: #ED1A39;
+  --color-black: #231F20; 
+  --color-black-text: #000000; 
+  --color-dark-grey: #959595;
+  --color-grey: #ACACAC;
+  --color-light-grey: #E2DEDC;
+  --color-green: #00A8A9;
+  --color-dark-blue: #1E2B50;
+  --color-white: #fff;
+  --color-orange: #F26324;
+
+  --font-size-12: 0.75rem;
+  --font-size-14: 0.875rem;
+  --font-size-16: 1rem;
+  --font-size-18: 1.125rem;
+  --font-size-21: 1.313rem;
+  --font-size-24: 1.5rem;
+  --font-size-26: 1.625rem;
+  --font-size-32: 2rem;
+}
+
+body,
+h1,
+h2,
+ul,
+ul,
+li,
+p,
+a {
+  margin: 0px;
+  padding: 0px;
+  font-family: var("--font-open-sans");
+}
+
+a:focus,
+input:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Raleway, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input {
+  &:focus {
+    outline-offset: none;
+    border: none;
+    outline: none;
+  }
+}
+
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+main {
+  animation: show-down 0.8s forwards;
+}

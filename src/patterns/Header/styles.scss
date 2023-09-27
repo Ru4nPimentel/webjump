@@ -1,0 +1,45 @@
+header{
+  .box_login {
+    background-color: var(--color-black);
+    width: 100%;
+    nav{
+      height: 31px;
+      max-width: 1440px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-weight: 400;
+      flex: 1;
+      font-size: var(--font-size-14);
+      span{
+        color: var(--color-white);
+      }
+      a{
+        color: var(--color-white);
+        font-weight: 700;
+        padding: 0px 10px;
+        text-decoration: underline;
+        transition: ease 0.3s;
+        &:hover{
+          // color: var(--color-red-text);
+          opacity: 0.8;
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        justify-content: center;
+      }
+    }
+  }
+  .box_middle{
+    max-width: 1440px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    .img_logo{
+      width: 186px;
+      height: 100%;
+    }
+  }
+}
