@@ -4,6 +4,7 @@ import ButtonMobile from "@/components/ButtonMobile";
 import NavCategories from "@/patterns/NavCategories";
 
 import "./styles.scss";
+import Search from "@/components/Search";
 
 function Header() {
   return (
@@ -18,7 +19,7 @@ function Header() {
       <div className="box_middle">
         <ButtonMobile />
         <Logo className="img_logo" />
-        <div> teste </div>
+        <Search />
       </div>
       <NavCategories className="nav_header" isMenu={true} isMobile={true} />
     </header>

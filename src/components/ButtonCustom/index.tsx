@@ -15,7 +15,7 @@ const ButtonCustom = ({
   className,
   type = "button",
   children,
-  isLink,
+  isLink = false,
   link,
 }: ButtonProps) => {
   return isLink ? (
