@@ -1,28 +1,47 @@
+"use strict";
+import { IListProps } from "@/types";
 import Link from "next/link";
 
-type ListProps = {
-  text: string;
-  link: string;
-};
-
 type NavProps = React.ComponentProps<"nav"> & {
-  list: ListProps[];
+  list: IListProps[];
+  initialLi?: { name: string; path: string };
+  lastlLi?: { name: string; path: string };
 };
 
-const NavCustom = ({ list, className, ...pros }: NavProps) => {
+const NavCustom = ({
+  list,
+  className,
+  initialLi,
+  lastlLi,
+  ...pros
+}: NavProps) => {
   return (
     <nav className={className} {...pros}>
-      <ul>
-        {list.map(({ text, link }, index) => {
+      <menu role="navigation">
+        {initialLi && (
+          <li>
+            <Link href={`${initialLi.path}`}>
+              <span>{initialLi.name}</span>
+            </Link>
+          </li>
+        )}
+        {list.map(({ id, name, path }, index) => {
           return (
-            <li key={index}>
-              <Link href={link}>
-                <span>{text}</span>
+            <li key={id}>
+              <Link href={`/product/${path}`}>
+                <span>{name}</span>
               </Link>
             </li>
           );
         })}
-      </ul>
+        {lastlLi && (
+          <li>
+            <Link href={`${lastlLi.path}`}>
+              <span>{lastlLi.name}</span>
+            </Link>
+          </li>
+        )}
+      </menu>
     </nav>
   );
 };

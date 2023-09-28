@@ -1,7 +1,7 @@
 import Logo from "@/components/Logo";
 import Link from "next/link";
 import ButtonMobile from "@/components/ButtonMobile";
-import NavHeader from "@/patterns/NavHeader";
+import NavCategories from "@/patterns/NavCategories";
 
 import "./styles.scss";
 
@@ -20,7 +20,7 @@ function Header() {
         <Logo className="img_logo" />
         <div> teste </div>
       </div>
-      <NavHeader />
+      <NavCategories className="nav_header" isMenu={true} isMobile={true} />
     </header>
   );
 }

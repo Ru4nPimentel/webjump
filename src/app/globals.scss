@@ -5,6 +5,7 @@
   --color-black-text: #000000; 
   --color-dark-grey: #959595;
   --color-grey: #ACACAC;
+  --color-grey-menu: #626262;
   --color-light-grey: #E2DEDC;
   --color-green: #00A8A9;
   --color-dark-blue: #1E2B50;
@@ -21,17 +22,19 @@
   --font-size-32: 2rem;
 }
 
+
+
 body,
 h1,
 h2,
 ul,
 ul,
+menu,
 li,
 p,
 a {
   margin: 0px;
   padding: 0px;
-  font-family: var("--font-open-sans");
 }
 
 a:focus,
@@ -39,15 +42,6 @@ input:focus,
 select:focus,
 button:focus {
   outline: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Raleway, sans-serif;
 }
 
 * {
@@ -58,17 +52,12 @@ ul {
   list-style: none;
 }
 
-ul {
+ul, menu {
   list-style: none;
 }
 
 a {
   text-decoration: none;
-}
-
-img {
-  display: block;
-  max-width: 100%;
 }
 
 input {
@@ -79,11 +68,16 @@ input {
   }
 }
 
+.grid{
+  display: grid;
+  margin: 0 auto;
+  padding: 0px 10px;
 
-body {
-  font-family: Montserrat, sans-serif;
-}
+  grid-template-columns: 261px 1fr;
+  gap: 20px;
 
-main {
-  animation: show-down 0.8s forwards;
+  width: 1440px;
+  @media only screen and (max-width: 1439px) {width: 1024px; grid-template-columns: 208px 1fr;}
+  @media only screen and (max-width: 1023px) { width: 768px; grid-template-columns: 154px 1fr;}
+  @media only screen and (max-width: 767px) { width: 100%; display: block;}
 }

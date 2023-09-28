@@ -1,10 +1,8 @@
 "use client";
+import useFetch from "@/hooks/useFetch";
+import { API_URL } from "@/services/api";
+import { IListArray, IUiContext } from "@/types";
 import React, { useState } from "react";
-
-type IUiContext = {
-  menuOpen: boolean;
-  setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
-};
 
 export const UiContext = React.createContext<IUiContext | null>(null);
 
@@ -18,8 +16,10 @@ export const useUi = () => {
 export const UiContextProvider = ({ children }: React.PropsWithChildren) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const ListNav = useFetch<IListArray>(`${API_URL}list`);
+
   return (
-    <UiContext.Provider value={{ menuOpen, setMenuOpen }}>
+    <UiContext.Provider value={{ menuOpen, setMenuOpen, ListNav }}>
       {children}
     </UiContext.Provider>
   );
